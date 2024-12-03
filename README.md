@@ -4,7 +4,7 @@
 
 Welcome to the ZKPass Verification Blog! This project demonstrates a secure and privacy-preserving authentication system using Zero Knowledge Proof (ZKP). It allows users to verify their identity without revealing any sensitive data, while gaining access to exclusive content on the blog once verification is successful.
 
-This project integrates the [zkPass Transgate](https://zkpass.com) JavaScript SDK for the authentication process, leveraging Ethereum and the Zero Knowledge Proof protocol.
+This project integrates the [zkPass Transgate](https://zkpass.com) JavaScript SDK for the authentication process, leveraging Ethereum and the Zero Knowledge Proof protocol, with a Discord-based verification method.
 
 **Live Demo**: [ZKPass Imperialis Blog](https://zkpass-imperialis-projects.vercel.app)
 
@@ -13,6 +13,7 @@ This project integrates the [zkPass Transgate](https://zkpass.com) JavaScript SD
 ## Features
 
 - **Secure Verification**: The app uses zkPass Transgate and Ethereum to verify the user's identity using Zero Knowledge Proof (ZKP).
+- **Discord Verification**: Users verify their identity through Discord, integrating the platform into the authentication flow.
 - **Exclusive Blog Access**: After successful verification, users gain access to a cocktail recipe blog with amazing cocktail recipes.
 - **Privacy Preserving**: No sensitive data is collected. Only the verification of criteria required for blog access takes place.
 - **Responsive**: The application is fully responsive and optimized for a variety of screen sizes.
@@ -69,6 +70,7 @@ To run this project locally, follow these steps:
 - **Vite**: A fast build tool for modern web development.
 - **zkPass Transgate SDK**: A library that implements Zero Knowledge Proof authentication.
 - **Ethereum**: A decentralized platform used for authentication through smart contracts.
+- **Discord**: Used for verifying the user's identity during the authentication process.
 - **SCSS/CSS**: Styles are written in standard CSS for this project, although SCSS could be used for better styling management in future versions.
 
 ---
@@ -92,6 +94,7 @@ This project has been deployed on Vercel. You can view the live version at:
 2. **Verification**:
    - The app checks whether zkPass Transgate is available. If not, it prompts the user to install the extension.
    - If available, the app connects to Ethereum, retrieves the user's address, and sends a verification request to the zkPass Transgate service.
+   - Discord is used for identity verification. The user must complete a verification step through Discord.
 
 3. **Identity Verification**:
    - zkPass verifies the user's identity using Zero Knowledge Proofs. It ensures that the user meets the required criteria for blog access without exposing any personal data.
@@ -129,6 +132,7 @@ If you run into any issues while running the project locally or on deployment, p
 
 - **Ethereum Network Issue**: Ensure that you have the MetaMask extension installed and connected to a valid Ethereum network.
 - **zkPass Transgate Extension**: Make sure that the zkPass Transgate extension is installed in your browser.
+- **Discord Integration**: Make sure you have the necessary permissions and are logged into Discord for identity verification.
 
 For any further issues, feel free to open an issue on the [GitHub Issues page](https://github.com/imperialis/zkpass/issues).
 
@@ -138,10 +142,4 @@ For any further issues, feel free to open an issue on the [GitHub Issues page](h
 
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for more details.
 
----
-
-## Acknowledgments
-
-- **zkPass Transgate SDK** for enabling secure Zero Knowledge Proof-based identity verification.
-- **Vercel** for providing seamless hosting and deployment.
 ```
